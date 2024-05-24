@@ -1,35 +1,28 @@
 package tun
-
 import (
 	"os"
 	"runtime"
 	"sync"
-	"time"
 
 	"github.com/sagernet/netlink"
 	E "github.com/sagernet/sing/common/exceptions"
 	"github.com/sagernet/sing/common/logger"
 	"github.com/sagernet/sing/common/x/list"
-
 	"golang.org/x/sys/unix"
 )
-
 type networkUpdateMonitor struct {
 	routeUpdate chan netlink.RouteUpdate
 	linkUpdate  chan netlink.LinkUpdate
 	close       chan struct{}
-
 	access    sync.Mutex
 	callbacks list.List[NetworkUpdateCallback]
 	logger    logger.Logger
 }
-
 var ErrNetlinkBanned = E.New(
 	"netlink socket in Android is banned by Google, " +
 		"use the root or system (ADB) user to run sing-box, " +
 		"or switch to the sing-box Adnroid graphical interface client",
 )
-
 func NewNetworkUpdateMonitor(logger logger.Logger) (NetworkUpdateMonitor, error) {
 	monitor := &networkUpdateMonitor{
 		routeUpdate: make(chan netlink.RouteUpdate, 2),
@@ -53,7 +46,6 @@ func NewNetworkUpdateMonitor(logger logger.Logger) (NetworkUpdateMonitor, error)
 	}
 	return monitor, nil
 }
-
 func (m *networkUpdateMonitor) Start() error {
 	err := netlink.RouteSubscribe(m.routeUpdate, m.close)
 	if err != nil {
@@ -68,9 +60,6 @@ func (m *networkUpdateMonitor) Start() error {
 }
 
 func (m *networkUpdateMonitor) loopUpdate() {
-	const minDuration = time.Second
-	timer := time.NewTimer(minDuration)
-	defer timer.Stop()
 	for {
 		select {
 		case <-m.close:
@@ -79,12 +68,6 @@ func (m *networkUpdateMonitor) loopUpdate() {
 		case <-m.linkUpdate:
 		}
 		m.emit()
-		select {
-		case <-m.close:
-			return
-		case <-timer.C:
-			timer.Reset(minDuration)
-		}
 	}
 }
 
