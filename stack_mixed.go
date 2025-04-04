@@ -10,6 +10,7 @@ import (
 	E "github.com/metacubex/sing/common/exceptions"
 	M "github.com/metacubex/sing/common/metadata"
 
+	"github.com/ForestL18/sing-tun/internal/gtcpip/header"
 	"github.com/metacubex/gvisor/pkg/buffer"
 	"github.com/metacubex/gvisor/pkg/tcpip/adapters/gonet"
 	gHdr "github.com/metacubex/gvisor/pkg/tcpip/header"
@@ -17,7 +18,6 @@ import (
 	"github.com/metacubex/gvisor/pkg/tcpip/stack"
 	"github.com/metacubex/gvisor/pkg/tcpip/transport/udp"
 	"github.com/metacubex/gvisor/pkg/waiter"
-	"github.com/metacubex/sing-tun/internal/gtcpip/header"
 )
 
 type Mixed struct {

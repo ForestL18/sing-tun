@@ -4,7 +4,7 @@ import (
 	"crypto/rand"
 	"testing"
 
-	"github.com/metacubex/sing-tun/internal/tschecksum"
+	"github.com/ForestL18/sing-tun/internal/tschecksum"
 )
 
 func BenchmarkTsChecksum(b *testing.B) {

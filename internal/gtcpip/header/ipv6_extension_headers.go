@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/metacubex/sing-tun/internal/gtcpip"
+	tcpip "github.com/ForestL18/sing-tun/internal/gtcpip"
 	"github.com/metacubex/sing/common"
 )
 

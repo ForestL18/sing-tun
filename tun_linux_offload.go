@@ -15,7 +15,7 @@ import (
 	"io"
 	"unsafe"
 
-	"github.com/metacubex/sing-tun/internal/gtcpip/checksum"
+	"github.com/ForestL18/sing-tun/internal/gtcpip/checksum"
 	E "github.com/metacubex/sing/common/exceptions"
 
 	"golang.org/x/sys/unix"

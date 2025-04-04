@@ -18,8 +18,8 @@ import (
 	"encoding/binary"
 	"math"
 
-	"github.com/metacubex/sing-tun/internal/gtcpip"
-	"github.com/metacubex/sing-tun/internal/gtcpip/checksum"
+	tcpip "github.com/ForestL18/sing-tun/internal/gtcpip"
+	"github.com/ForestL18/sing-tun/internal/gtcpip/checksum"
 )
 
 const (

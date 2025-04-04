@@ -3,8 +3,8 @@ package tun
 import (
 	"strconv"
 
-	tcpip "github.com/metacubex/sing-tun/internal/gtcpip"
-	"github.com/metacubex/sing-tun/internal/gtcpip/header"
+	tcpip "github.com/ForestL18/sing-tun/internal/gtcpip"
+	"github.com/ForestL18/sing-tun/internal/gtcpip/header"
 	F "github.com/metacubex/sing/common/format"
 	N "github.com/metacubex/sing/common/network"
 )

@@ -18,9 +18,9 @@ import (
 	E "github.com/metacubex/sing/common/exceptions"
 	"github.com/metacubex/sing/common/windnsapi"
 
-	"github.com/metacubex/sing-tun/internal/winipcfg"
-	"github.com/metacubex/sing-tun/internal/winsys"
-	"github.com/metacubex/sing-tun/internal/wintun"
+	"github.com/ForestL18/sing-tun/internal/winipcfg"
+	"github.com/ForestL18/sing-tun/internal/winsys"
+	"github.com/ForestL18/sing-tun/internal/wintun"
 
 	"golang.org/x/sys/windows"
 )

@@ -7,8 +7,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/metacubex/sing-tun/internal/gtcpip/checksum"
-	"github.com/metacubex/sing-tun/internal/gtcpip/header"
+	"github.com/ForestL18/sing-tun/internal/gtcpip/checksum"
+	"github.com/ForestL18/sing-tun/internal/gtcpip/header"
 	"github.com/metacubex/sing/common"
 	"github.com/metacubex/sing/common/buf"
 	"github.com/metacubex/sing/common/control"
