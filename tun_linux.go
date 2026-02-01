@@ -73,6 +73,7 @@ func New(options Options) (Tun, error) {
 			options: options,
 		}
 	}
+	nativeTun.disableReversePathFilter()
 	return nativeTun, nil
 }
 
@@ -1048,4 +1049,11 @@ func (t *NativeTun) setSearchDomainForSystemdResolved() {
 		_ = shell.Exec(ctlPath, "default-route", t.options.Name, "true").Run()
 		_ = shell.Exec(ctlPath, append([]string{"dns", t.options.Name}, common.Map(dnsServer, netip.Addr.String)...)...).Run()
 	}()
+}
+
+func (t *NativeTun) disableReversePathFilter() {
+	_ = os.WriteFile("/proc/sys/net/ipv4/conf/all/rp_filter", []byte{'0'}, 0o644)
+	if t.options.Name != "" {
+		_ = os.WriteFile("/proc/sys/net/ipv4/conf/"+t.options.Name+"/rp_filter", []byte{'0'}, 0o644)
+	}
 }
