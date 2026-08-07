@@ -19,7 +19,7 @@ func fixWindowsFirewall() error {
 		Name:            "sing-tun (" + absPath + ")",
 		ApplicationName: absPath,
 		Enabled:         true,
-		Protocol:        winfw.NET_FW_IP_PROTOCOL_TCP,
+		Protocol:        winfw.NET_FW_IP_PROTOCOL_ANY,
 		Direction:       winfw.NET_FW_RULE_DIR_IN,
 		Action:          winfw.NET_FW_ACTION_ALLOW,
 		Profiles:        winfw.NET_FW_PROFILE2_ALL,
