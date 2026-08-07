@@ -17,7 +17,7 @@ package header
 import (
 	"encoding/binary"
 
-	"github.com/metacubex/sing-tun/internal/gtcpip"
+	"github.com/forestl18/sing-tun/internal/gtcpip"
 )
 
 const (

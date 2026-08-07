@@ -13,8 +13,8 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/metacubex/sing-tun/internal/gtcpip/checksum"
-	"github.com/metacubex/sing-tun/internal/gtcpip/header"
+	"github.com/forestl18/sing-tun/internal/gtcpip/checksum"
+	"github.com/forestl18/sing-tun/internal/gtcpip/header"
 	"github.com/metacubex/sing/common"
 	"github.com/metacubex/sing/common/control"
 	E "github.com/metacubex/sing/common/exceptions"

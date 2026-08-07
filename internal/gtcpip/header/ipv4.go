@@ -20,8 +20,8 @@ import (
 	"net/netip"
 	"time"
 
-	"github.com/metacubex/sing-tun/internal/gtcpip"
-	"github.com/metacubex/sing-tun/internal/gtcpip/checksum"
+	"github.com/forestl18/sing-tun/internal/gtcpip"
+	"github.com/forestl18/sing-tun/internal/gtcpip/checksum"
 	"github.com/metacubex/sing/common"
 )
 
