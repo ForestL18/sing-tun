@@ -9,8 +9,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/sing-tun"
-	"github.com/metacubex/sing-tun/internal/gtcpip/header"
+	"github.com/forestl18/sing-tun"
+	"github.com/forestl18/sing-tun/internal/gtcpip/header"
 	"github.com/metacubex/sing/common/buf"
 	"github.com/metacubex/sing/common/control"
 	E "github.com/metacubex/sing/common/exceptions"

@@ -1,4 +1,4 @@
-module github.com/metacubex/sing-tun
+module github.com/forestl18/sing-tun
 
 go 1.20
 
