@@ -17,7 +17,7 @@ package header
 import (
 	"net/netip"
 
-	tcpip "github.com/metacubex/sing-tun/internal/gtcpip"
+	tcpip "github.com/forestl18/sing-tun/internal/gtcpip"
 )
 
 const (

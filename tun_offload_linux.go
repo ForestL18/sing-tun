@@ -13,9 +13,9 @@ import (
 	"io"
 	"unsafe"
 
-	"github.com/metacubex/sing-tun/internal/gtcpip"
-	"github.com/metacubex/sing-tun/internal/gtcpip/checksum"
-	"github.com/metacubex/sing-tun/internal/gtcpip/header"
+	"github.com/forestl18/sing-tun/internal/gtcpip"
+	"github.com/forestl18/sing-tun/internal/gtcpip/checksum"
+	"github.com/forestl18/sing-tun/internal/gtcpip/header"
 
 	"golang.org/x/sys/unix"
 )
