@@ -4,7 +4,7 @@ import (
 	"net/netip"
 	"syscall"
 
-	"github.com/metacubex/sing-tun/internal/gtcpip/header"
+	"github.com/forestl18/sing-tun/internal/gtcpip/header"
 	"github.com/metacubex/sing/common"
 )
 
